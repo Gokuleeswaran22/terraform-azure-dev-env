@@ -27,3 +27,16 @@ module "nsg" {
 
   subnet_id = module.network.subnet_id
 }
+
+module "vm" {
+  source = "./modules/vm"
+
+  resource_group_name = module.resource_group.resource_group_name
+  location            = var.location
+
+  subnet_id = module.network.subnet_id
+
+  vm_name         = var.vm_name
+  admin_username  = var.admin_username
+  public_key_path = pathexpand(var.public_key_path)
+}
