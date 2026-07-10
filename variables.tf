@@ -21,3 +21,7 @@ variable "subnet_name" {
 variable "subnet_prefixes" {
   type = list(string)
 }
+
+variable "nsg_name" {
+  type = string
+}
