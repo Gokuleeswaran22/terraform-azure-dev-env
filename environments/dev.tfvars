@@ -14,3 +14,9 @@ subnet_prefixes = [
 ]
 
 nsg_name = "nsg-dev"
+
+vm_name = "vm-dev"
+
+admin_username = "azureuser"
+
+public_key_path = "~/.ssh/id_ed25519.pub"
